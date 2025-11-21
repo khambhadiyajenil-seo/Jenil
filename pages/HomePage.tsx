@@ -44,27 +44,27 @@ const skills = [
 ];
 
 const tools = [
-  "Google Analytics 4", "Google Search Console", "SEMrush", "Ahrefs", "Screaming Frog", "WordPress", "Shopify", "Surfer SEO"
+  "Google AI Studio", "ChatGPT", "Google Analytics 4", "Google Search Console", "SEMrush", "Ahrefs", "Screaming Frog", "WordPress", "Shopify", "Surfer SEO"
 ];
 
 const experience = [
   {
-    year: "2022 - Present",
-    role: "Senior SEO Specialist",
-    company: "Growth Digital Agency",
-    desc: "Leading SEO strategy for enterprise clients, achieving average 150% traffic growth."
+    year: "Feb 2025 - Present",
+    role: "SEO Executive",
+    company: "Vision Infotech",
+    desc: "Boosting organic visibility, improving keyword rankings, and driving quality traffic through proven SEO strategies. Specializing in SEO, Social Media Marketing, and WordPress."
   },
   {
-    year: "2020 - 2022",
-    role: "SEO Analyst",
-    company: "Tech Solutions Inc.",
-    desc: "Managed technical audits and content optimization for SaaS products."
+    year: "Jun 2024 - Apr 2025",
+    role: "Digital Marketing Specialist",
+    company: "Ahmedabad School of Digital Marketing",
+    desc: "Freelance role focusing on Shopify optimization, digital marketing campaigns, and advanced SEO strategies."
   },
   {
-    year: "2018 - 2020",
-    role: "Content Marketer",
-    company: "Creative Studio",
-    desc: "Developed editorial calendars and link-building campaigns."
+    year: "Nov 2024 - Feb 2025",
+    role: "Digital Marketing Specialist",
+    company: "Webito Infotech",
+    desc: "Internship focused on core Digital Marketing and Search Engine Optimization (SEO) implementation."
   }
 ];
 
@@ -98,38 +98,41 @@ const HomePage: React.FC = () => {
             
             {/* LEFT COLUMN: Profile Image & Floating Stats */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative order-1" data-aos="fade-right" data-aos-duration="1000">
-              {/* Main Image Card Container - Adjusted sizes */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[500px]">
+              {/* Main Image Card Container - Updated to Circular with Animation */}
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px]">
                 
-                {/* Backing Decor Shape */}
-                <div className="absolute inset-0 bg-gray-900 rounded-[2rem] transform rotate-3 opacity-5 translate-x-4 translate-y-4"></div>
+                {/* Animated Rotating Gradient Ring Background */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-full opacity-70 blur-lg animate-spin-slow"></div>
                 
-                {/* Image Frame */}
-                <div className="absolute inset-0 bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-gray-100 group">
+                {/* Static Backing Ring for contrast */}
+                <div className="absolute -inset-1 bg-white rounded-full"></div>
+
+                {/* Image Frame - Circular */}
+                <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-white shadow-2xl group">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80" 
-                    alt="Professional Profile" 
+                    src="https://raw.githubusercontent.com/khambhadiyajenil-seo/Jenil/main/1763028621090.jpeg" 
+                    alt="Jenil Khambhadiya - SEO Executive" 
                     className="w-full h-full object-cover object-top transition-transform duration-700 ease-in-out group-hover:scale-105"
                   />
                   {/* Subtle overlay at bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
 
                 {/* Floating Card 1: Experience */}
-                <div className="absolute -left-4 top-8 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-xl border border-gray-100 animate-float-slow hidden sm:block z-20">
+                <div className="absolute -left-4 top-12 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-xl border border-gray-100 animate-float-slow hidden sm:block z-20">
                    <div className="flex items-center gap-3">
                       <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                       </div>
                       <div>
                          <p className="text-[10px] text-gray-500 font-semibold uppercase tracking-wide">Experience</p>
-                         <p className="text-base font-bold text-gray-900">5+ Years</p>
+                         <p className="text-base font-bold text-gray-900">3+ Years</p>
                       </div>
                    </div>
                 </div>
 
                 {/* Floating Card 2: Results */}
-                <div className="absolute -right-4 bottom-16 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-xl border border-gray-100 animate-float-medium hidden sm:block z-20">
+                <div className="absolute -right-4 bottom-20 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-xl border border-gray-100 animate-float-medium hidden sm:block z-20">
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-green-100 rounded-lg text-green-600">
                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
@@ -139,11 +142,6 @@ const HomePage: React.FC = () => {
                          <p className="text-base font-bold text-gray-900">+350% Avg</p>
                       </div>
                    </div>
-                </div>
-
-                {/* Decorative Floating Icon */}
-                <div className="absolute -right-8 top-8 w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl rotate-12 flex items-center justify-center shadow-lg animate-float-fast hidden lg:flex">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                 </div>
 
               </div>
@@ -159,7 +157,7 @@ const HomePage: React.FC = () => {
                 Available for new projects
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.1] tracking-tight">
                   I scale brands with <br/>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 relative">
@@ -168,21 +166,20 @@ const HomePage: React.FC = () => {
                   </span>
                 </h1>
                 
-                <p className="text-lg text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0 pt-2">
-                  Hi, I'm <span className="font-bold text-gray-900">[Your Name]</span>. I turn search engines into your most profitable revenue channel through data-driven SEO strategies.
-                </p>
+                <div className="pt-2 space-y-2">
+                  <p className="text-xl text-gray-900 font-bold">
+                    Hi, I'm Jenil Khambhadiya <span className="text-sm font-normal text-gray-500 ml-1">(He/Him)</span>
+                  </p>
+                  <p className="text-base text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    SEO Executive at Vision Infotech | Jeniqs.in - Digital Marketing Agency | SEO, PPC, Google Ads, Social Media Ads | Serving 50+ Clients | SEO Strategist with Proven Results
+                  </p>
+                </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
-                 <Link 
-                   to="/casestudies" 
-                   className="px-6 py-3 bg-gray-900 text-white rounded-xl font-bold text-base hover:bg-gray-800 transition-all shadow-xl shadow-gray-900/20 transform hover:-translate-y-1 w-full sm:w-auto text-center"
-                 >
-                    View Case Studies
-                 </Link>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-4">
                  <Link 
                    to="/contact" 
-                   className="px-6 py-3 bg-white text-gray-900 border-2 border-gray-200 rounded-xl font-bold text-base hover:border-gray-900 transition-all transform hover:-translate-y-1 w-full sm:w-auto text-center"
+                   className="px-6 py-3 bg-gray-900 text-white rounded-xl font-bold text-base hover:bg-gray-800 transition-all shadow-xl shadow-gray-900/20 transform hover:-translate-y-1 w-full sm:w-auto text-center"
                  >
                     Contact Me
                  </Link>
@@ -238,7 +235,7 @@ const HomePage: React.FC = () => {
                 Tech Stack
               </h3>
               <p className="text-gray-600 mb-8 text-base">
-                Leveraging enterprise-grade technology to gather intelligence, track progress, and optimize performance.
+                Leveraging enterprise-grade technology and AI to gather intelligence, track progress, and optimize performance.
               </p>
               
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -297,14 +294,6 @@ const HomePage: React.FC = () => {
 
                <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link 
-                    to="/casestudies" 
-                    className="w-full sm:w-auto px-8 py-4 bg-blue-600 text-white font-bold text-base rounded-xl shadow-lg shadow-blue-600/30 hover:bg-blue-500 transition-all transform hover:-translate-y-1 flex items-center justify-center"
-                  >
-                    View Case Studies
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                  </Link>
-                  
-                  <Link 
                     to="/contact" 
                     className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-gray-600 text-white font-bold text-base rounded-xl hover:bg-white hover:text-gray-900 hover:border-white transition-all transform hover:-translate-y-1 flex items-center justify-center"
                   >
@@ -330,6 +319,15 @@ const HomePage: React.FC = () => {
         }
         .animation-delay-2000 {
           animation-delay: 2s;
+        }
+        
+        /* Slow Spin Animation */
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+          animation: spin-slow 12s linear infinite;
         }
         
         /* Float Animations for Cards */

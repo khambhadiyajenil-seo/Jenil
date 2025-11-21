@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Home', path: '/' },
-  { name: 'Case Studies', path: '/casestudies' },
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -19,7 +18,7 @@ const Header: React.FC = () => {
     <header className="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <NavLink to="/" className="text-xl font-bold text-gray-800">P R </NavLink>
+          <NavLink to="/" className="text-xl font-bold text-gray-800">Jenil Khambhadiya</NavLink>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">

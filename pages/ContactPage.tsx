@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 
 const certifications = [
+  { name: "Advanced Digital Marketing", issuer: "ASDM", year: "2025" },
+  { name: "E-Commerce Specialist", issuer: "WsCube Tech", year: "2025" },
   { name: "Google Analytics 4", issuer: "Google", year: "2023" },
-  { name: "Technical SEO Exam", issuer: "Semrush", year: "2022" },
-  { name: "Inbound Marketing", issuer: "HubSpot", year: "2021" },
   { name: "Google Ads Search", issuer: "Google", year: "2023" },
 ];
 
@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   // LIVE GOOGLE SCRIPT URL
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyDgUMCdcEPZDf5jgdtBP1S9iWQggFvecmt_tOFJWZ-j4BJD-3dJN_j-hMPAKQLLC9sOQ/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwxBHMGxTSsj7YK_omac8Rd3YKpwrBmG_qJdtDkgOL11qOuKRBSmAKFYHVj74Tak6KRpQ/exec";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -110,7 +110,7 @@ const ContactPage: React.FC = () => {
                          </div>
                          <div className="ml-4">
                             <p className="text-sm font-medium text-gray-500">Location</p>
-                            <p className="text-base font-bold text-gray-900">New York, NY (Remote Available)</p>
+                            <p className="text-base font-bold text-gray-900">Surat, Gujarat (Remote Available)</p>
                          </div>
                       </div>
 
@@ -282,7 +282,7 @@ const ContactPage: React.FC = () => {
                  {certifications.map((cert, i) => (
                     <div key={i} className="bg-gray-800/50 p-3 rounded-lg flex flex-col items-center text-center justify-center border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition-all duration-300">
                        <div className="mb-1.5 text-yellow-400">
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z"></path></svg>
                        </div>
                        <div className="text-xs font-bold text-gray-200">{cert.name}</div>
                        <div className="text-[9px] text-gray-500 uppercase tracking-wider mt-0.5">{cert.issuer}</div>

@@ -10,11 +10,28 @@ interface Project {
   proofLink: string;
 }
 
+// Updated Certifications Data
 const certifications = [
-  { name: "Google Analytics 4", issuer: "Google", year: "2023" },
-  { name: "Technical SEO Exam", issuer: "Semrush", year: "2022" },
-  { name: "Inbound Marketing", issuer: "HubSpot", year: "2021" },
-  { name: "Google Ads Search", issuer: "Google", year: "2023" },
+  { 
+    name: "Advanced Digital Marketing Program", 
+    issuer: "Ahmedabad School of Digital Marketing (ASDM)", 
+    date: "Apr 2025",
+    credentialId: "213206",
+    skills: "Digital Marketing, SEO, +7 skills",
+    logoColor: "bg-orange-600",
+    logoText: "ASDM",
+    desc: "Completed advanced digital marketing program at ASDM. Thanks to all trainers and team!"
+  },
+  { 
+    name: "Certified Web Professional - E-Commerce Specialist", 
+    issuer: "WsCube Tech", 
+    date: "Mar 2025",
+    credentialId: "WS/2025/1/36270",
+    skills: "E-commerce SEO, Digital Marketing, +1 skill",
+    logoColor: "bg-blue-600",
+    logoText: "WsCube",
+    desc: "Mastery in ranking online stores & increasing sales."
+  },
 ];
 
 const processSteps = [
@@ -167,27 +184,34 @@ const AboutPage: React.FC = () => {
   return (
     <div className="bg-white overflow-hidden font-sans text-gray-900">
       
-      {/* --- 1. HERO SECTION (CENTERED, NO IMAGE) --- */}
-      <section className="pt-16 pb-12 bg-white relative">
+      {/* --- 1. HERO SECTION --- */}
+      <section className="pt-20 pb-16 bg-white relative">
         {/* Subtle Background Decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-blue-50/50 to-transparent rounded-full blur-3xl -z-10 opacity-60"></div>
         </div>
 
-        <div className="container mx-auto px-6 text-center max-w-4xl relative z-10">
+        <div className="container mx-auto px-6 text-center max-w-5xl relative z-10">
           <div data-aos="fade-down">
             <div className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full border border-blue-100">
               About The Expert
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
-              More than just rankings.<br className="hidden md:block" />
+            <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
+              Jenil Khambhadiya <span className="text-sm font-normal text-gray-500 align-middle ml-2">(He/Him)</span> <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                I build revenue engines.
+                SEO Executive at Vision Infotech
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
-              I believe in a holistic approach to SEO that goes beyond just keywords. My focus is on understanding user intent, creating valuable content, and ensuring technical excellence to build a sustainable foundation for long-term growth.
-            </p>
+            
+            <div className="text-lg text-gray-600 mb-10 leading-relaxed max-w-4xl mx-auto text-left md:text-center space-y-4">
+              <p className="font-semibold text-blue-600 mb-2">Jeniqs.in - Digital Marketing Agency</p>
+              <p>
+                SEO, PPC, Google Ads, Social Media Ads | Serving 50+ Clients | SEO Strategist with Proven Results
+              </p>
+              <p>
+                Currently working as an <strong>SEO Executive at Vision Infotech</strong>, I focus on boosting organic visibility, improving keyword rankings, and driving quality traffic to websites through proven SEO strategies.
+              </p>
+            </div>
           </div>
           
           {/* DESIGNED STATS SECTION */}
@@ -198,7 +222,7 @@ const AboutPage: React.FC = () => {
                     <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-3 group-hover:scale-110 transition-transform duration-300">
                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <span className="block text-4xl font-extrabold text-gray-900">5+</span>
+                    <span className="block text-4xl font-extrabold text-gray-900">3+</span>
                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Years Experience</span>
                  </div>
 
@@ -206,16 +230,16 @@ const AboutPage: React.FC = () => {
                     <div className="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 mb-3 group-hover:scale-110 transition-transform duration-300">
                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
                     </div>
-                    <span className="block text-4xl font-extrabold text-gray-900">100+</span>
-                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Projects Completed</span>
+                    <span className="block text-4xl font-extrabold text-gray-900">50+</span>
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Clients Served</span>
                  </div>
 
                  <div className="flex flex-col items-center justify-center group">
                     <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-600 mb-3 group-hover:scale-110 transition-transform duration-300">
                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <span className="block text-4xl font-extrabold text-gray-900">$2M+</span>
-                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Revenue Generated</span>
+                    <span className="block text-4xl font-extrabold text-gray-900">ROI</span>
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Focused Results</span>
                  </div>
 
              </div>
@@ -225,7 +249,7 @@ const AboutPage: React.FC = () => {
       </section>
 
 
-      {/* --- 2. PROCESS SECTION (NEW CARD DESIGN) --- */}
+      {/* --- 2. PROCESS SECTION --- */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-6">
            <div className="text-center max-w-3xl mx-auto mb-12">
@@ -253,7 +277,7 @@ const AboutPage: React.FC = () => {
       </section>
 
 
-      {/* --- 3. PROJECT HIGHLIGHTS (RESPONSIVE: Table on Desktop / Cards on Mobile) --- */}
+      {/* --- 3. PROJECT HIGHLIGHTS --- */}
       <section className="py-16 container mx-auto px-6">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900">Project Highlights</h2>
@@ -268,7 +292,7 @@ const AboutPage: React.FC = () => {
              </div>
           ) : (
             <>
-              {/* DESKTOP VIEW: Modern Clean Table */}
+              {/* DESKTOP VIEW */}
               <div className="hidden lg:block overflow-hidden rounded-xl shadow-lg border border-gray-100 bg-white" data-aos="zoom-in">
                  <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
@@ -314,12 +338,11 @@ const AboutPage: React.FC = () => {
                  </table>
               </div>
 
-              {/* MOBILE/TABLET VIEW: Professional Cards */}
+              {/* MOBILE VIEW */}
               <div className="lg:hidden space-y-6">
                 {projects.map((project, idx) => (
                   <div key={idx} className="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex flex-col gap-4 relative overflow-hidden" data-aos="fade-up">
                      <div className="absolute top-0 left-0 w-1 h-full bg-indigo-600"></div>
-                     
                      <div className="flex justify-between items-start pl-2">
                         <div>
                            <h3 className="font-bold text-lg text-gray-900">{project.projectName}</h3>
@@ -334,7 +357,6 @@ const AboutPage: React.FC = () => {
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                         </a>
                      </div>
-                     
                      <div className="grid gap-3 text-sm pl-2">
                         <div>
                           <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">Challenge</span>
@@ -345,7 +367,6 @@ const AboutPage: React.FC = () => {
                           <p className="text-gray-700 leading-snug">{project.strategy}</p>
                         </div>
                      </div>
-
                      <div className="pt-3 border-t border-gray-100 ml-2 mt-1">
                         <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-2">Key Results</span>
                         <div className="flex flex-wrap gap-2">
@@ -361,31 +382,47 @@ const AboutPage: React.FC = () => {
       </section>
 
 
-      {/* --- 4. CERTIFICATIONS (COMPACT & DARK) --- */}
-      <section className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6">
-           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              
-              <div className="text-center md:text-left" data-aos="fade-right">
-                 <h3 className="text-xl font-bold mb-1">Certified Expertise</h3>
-                 <p className="text-gray-400 text-sm max-w-xs">
-                    Up-to-date with the latest industry standards.
-                 </p>
-              </div>
+      {/* --- 4. CERTIFICATIONS (LICENSES & CERTIFICATIONS) --- */}
+      <section className="bg-gray-50 py-16 border-t border-gray-200">
+        <div className="container mx-auto px-6 max-w-5xl">
+            <div className="text-left mb-8" data-aos="fade-right">
+                <h3 className="text-2xl font-bold text-gray-900">Licenses & certifications</h3>
+            </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full md:w-auto" data-aos="fade-left">
-                 {certifications.map((cert, i) => (
-                    <div key={i} className="bg-gray-800/50 p-3 rounded-lg flex flex-col items-center text-center justify-center border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition-all duration-300">
-                       <div className="mb-1.5 text-yellow-400">
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                       </div>
-                       <div className="text-xs font-bold text-gray-200">{cert.name}</div>
-                       <div className="text-[9px] text-gray-500 uppercase tracking-wider mt-0.5">{cert.issuer}</div>
-                    </div>
-                 ))}
-              </div>
+            <div className="space-y-4">
+                {certifications.map((cert, i) => (
+                  <div key={i} className="bg-white p-6 rounded-xl border border-gray-200 flex flex-col md:flex-row gap-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay={i * 100}>
+                      {/* Logo/Image Placeholder */}
+                      <div className={`w-16 h-16 flex-shrink-0 ${cert.logoColor} text-white font-bold flex items-center justify-center rounded-lg text-xs tracking-wider`}>
+                          {cert.logoText}
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="flex-1">
+                          <h4 className="text-lg font-bold text-gray-900">{cert.name}</h4>
+                          <p className="text-sm text-gray-700 font-medium">{cert.issuer}</p>
+                          <p className="text-sm text-gray-500 mt-1">Issued {cert.date}</p>
+                          
+                          {cert.credentialId && (
+                            <p className="text-sm text-gray-500 mt-1">Credential ID {cert.credentialId}</p>
+                          )}
 
-           </div>
+                          <div className="mt-3 flex flex-wrap items-center gap-2">
+                             {/* Simple Skill Tags */}
+                             <span className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded border border-gray-200">
+                                {cert.skills}
+                             </span>
+                          </div>
+                          
+                          {cert.desc && (
+                             <p className="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-100 leading-relaxed">
+                               {cert.desc}
+                             </p>
+                          )}
+                      </div>
+                  </div>
+                ))}
+            </div>
         </div>
       </section>
 
