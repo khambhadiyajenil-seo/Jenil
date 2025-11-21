@@ -2,20 +2,43 @@
 import React from 'react';
 
 const SocialIcon: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+  <a 
+    href={href} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="group relative inline-flex items-center justify-center p-2 transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+    aria-label="LinkedIn Profile"
+  >
+    {/* Glow effect behind */}
+    <div className="absolute inset-0 rounded-full bg-blue-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md scale-150"></div>
     {children}
   </a>
 );
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-white border-t border-gray-200 relative z-20">
       <div className="container mx-auto px-6 py-8">
-        <div className="flex flex-col items-center sm:flex-row sm:justify-between">
-          <p className="text-gray-600">&copy; {new Date().getFullYear()} Jenil Khambhadiya. All rights reserved.</p>
-          <div className="flex space-x-4 mt-4 sm:mt-0">
+        <div className="flex flex-col items-center sm:flex-row sm:justify-between gap-4">
+          
+          {/* Copyright Text */}
+          <p className="text-gray-600 text-sm font-medium text-center sm:text-left">
+            &copy; {new Date().getFullYear()} Jenil Khambhadiya. All rights reserved.
+          </p>
+
+          {/* Social Area */}
+          <div className="flex items-center gap-3">
+            <span className="text-sm font-bold text-gray-400 uppercase tracking-wider hidden sm:block">Let's Connect</span>
             <SocialIcon href="https://www.linkedin.com/in/jenil-khambhadiya-seo-executive">
-               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995.017-2.277-1.387-2.277-1.405 0-1.622 1.096-1.622 2.206v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.28 2.066h2.558v8.59H3.725v-8.59zM17.638 2H6.362A4.362 4.362 0 002 6.362v11.276A4.362 4.362 0 006.362 22h11.276A4.362 4.362 0 0022 17.638V6.362A4.362 4.362 0 0017.638 2z" clipRule="evenodd"></path></svg>
+               {/* Creative LinkedIn Icon: Official Blue, Large, Shadowed */}
+               <svg 
+                 className="w-8 h-8 text-[#0077b5] drop-shadow-md group-hover:drop-shadow-xl transition-all duration-300" 
+                 viewBox="0 0 24 24" 
+                 fill="currentColor" 
+                 xmlns="http://www.w3.org/2000/svg"
+               >
+                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+               </svg>
             </SocialIcon>
           </div>
         </div>

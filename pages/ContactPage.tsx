@@ -1,13 +1,6 @@
 
 import React, { useState } from 'react';
 
-const certifications = [
-  { name: "Advanced Digital Marketing", issuer: "ASDM", year: "2025" },
-  { name: "E-Commerce Specialist", issuer: "WsCube Tech", year: "2025" },
-  { name: "Google Analytics 4", issuer: "Google", year: "2023" },
-  { name: "Google Ads Search", issuer: "Google", year: "2023" },
-];
-
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -100,7 +93,7 @@ const ContactPage: React.FC = () => {
                          </div>
                          <div className="ml-4">
                             <p className="text-sm font-medium text-gray-500">Email</p>
-                            <a href="mailto:hello@example.com" className="text-base font-bold text-gray-900 hover:text-blue-600 transition-colors">hello@example.com</a>
+                            <a href="mailto:khambhadiyajenil@gmail.com" className="text-base font-bold text-gray-900 hover:text-blue-600 transition-colors">khambhadiyajenil@gmail.com</a>
                          </div>
                       </div>
                       
@@ -110,7 +103,7 @@ const ContactPage: React.FC = () => {
                          </div>
                          <div className="ml-4">
                             <p className="text-sm font-medium text-gray-500">Location</p>
-                            <p className="text-base font-bold text-gray-900">Surat, Gujarat (Remote Available)</p>
+                            <p className="text-base font-bold text-gray-900">India</p>
                          </div>
                       </div>
 
@@ -120,7 +113,7 @@ const ContactPage: React.FC = () => {
                          </div>
                          <div className="ml-4">
                             <p className="text-sm font-medium text-gray-500">Availability</p>
-                            <p className="text-base font-bold text-gray-900">Open for new projects</p>
+                            <p className="text-base font-bold text-gray-900">Open for new project</p>
                          </div>
                       </div>
                    </div>
@@ -235,7 +228,7 @@ const ContactPage: React.FC = () => {
                         <button 
                           type="submit" 
                           disabled={status === 'submitting'}
-                          className={`w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg shadow-lg shadow-blue-600/30 hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 ${status === 'submitting' ? 'opacity-80 cursor-wait' : 'hover:scale-[1.02]'}`}
+                          className={`w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg shadow-lg shadow-blue-600/30 hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 ${status === 'submitting' ? 'opacity-80 cursor-not-allowed' : ''}`}
                         >
                            {status === 'submitting' ? (
                              <>
@@ -247,78 +240,19 @@ const ContactPage: React.FC = () => {
                              </>
                            ) : (
                              <>
-                               <span>Send Message</span>
+                               Send Message
                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                              </>
                            )}
                         </button>
-                        
-                        {status === 'error' && (
-                          <div className="text-red-600 text-center text-sm mt-2">
-                            Something went wrong. Please try again later.
-                          </div>
-                        )}
                      </form>
                    )}
+
                 </div>
              </div>
 
           </div>
        </div>
-
-        {/* --- CERTIFICATIONS SECTION --- */}
-       <section className="bg-gray-900 text-white py-12 mt-12">
-        <div className="container mx-auto px-6">
-           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              
-              <div className="text-center md:text-left" data-aos="fade-right">
-                 <h3 className="text-xl font-bold mb-1">Certified Expertise</h3>
-                 <p className="text-gray-400 text-sm max-w-xs">
-                    Up-to-date with the latest industry standards.
-                 </p>
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full md:w-auto" data-aos="fade-left">
-                 {certifications.map((cert, i) => (
-                    <div key={i} className="bg-gray-800/50 p-3 rounded-lg flex flex-col items-center text-center justify-center border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition-all duration-300">
-                       <div className="mb-1.5 text-yellow-400">
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z"></path></svg>
-                       </div>
-                       <div className="text-xs font-bold text-gray-200">{cert.name}</div>
-                       <div className="text-[9px] text-gray-500 uppercase tracking-wider mt-0.5">{cert.issuer}</div>
-                    </div>
-                 ))}
-              </div>
-
-           </div>
-        </div>
-      </section>
-
-       {/* Animation Styles */}
-       <style>{`
-          @keyframes blob {
-             0% { transform: translate(0px, 0px) scale(1); }
-             33% { transform: translate(30px, -50px) scale(1.1); }
-             66% { transform: translate(-20px, 20px) scale(0.9); }
-             100% { transform: translate(0px, 0px) scale(1); }
-          }
-          .animate-blob {
-             animation: blob 10s infinite;
-          }
-          .animation-delay-2000 {
-             animation-delay: 2s;
-          }
-          .animation-delay-4000 {
-             animation-delay: 4s;
-          }
-          .animate-fade-in-up {
-            animation: fadeInUp 0.5s ease-out forwards;
-          }
-          @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-       `}</style>
     </div>
   );
 };

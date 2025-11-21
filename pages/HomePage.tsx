@@ -110,7 +110,7 @@ const HomePage: React.FC = () => {
                 {/* Image Frame - Circular */}
                 <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-white shadow-2xl group">
                   <img 
-                    src="https://raw.githubusercontent.com/khambhadiyajenil-seo/Jenil/main/1763028621090.jpeg" 
+                    src="https://raw.githubusercontent.com/khambhadiyajenil-seo/Jenil/af786de17b3e7e2fd48f4bbb283fedd5cfe8a9a7/1763028621090.jpeg" 
                     alt="Jenil Khambhadiya - SEO Executive" 
                     className="w-full h-full object-cover object-top transition-transform duration-700 ease-in-out group-hover:scale-105"
                   />
